@@ -18,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <h2>Rohit Adrian Douglas</h2>
       </header>
     </div>
   );
