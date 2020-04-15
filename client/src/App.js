@@ -20,6 +20,7 @@ function App() {
         </a>
         <h2>Rohit Adrian Douglas</h2>
         <h2>He is India's finest</h2>
+        <h2>Hi I work in HP</h2>
       </header>
     </div>
   );
