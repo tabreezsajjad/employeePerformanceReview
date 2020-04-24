@@ -1,29 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./components/Common/Header";
+import Footer from "./components/Common/Footer";
+import Content from "./components/Common/Content";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <h2>Rohit Adrian Douglas</h2>
-        <h2>He is India's finest</h2>
-        <h2>Hi I work in HP</h2>
-        <h3>I like Curd rice</h3>
-      </header>
-    </div>
+    <React.Fragment>
+      <div className="main-container">
+        <Header></Header>
+        <Content></Content>
+        <Footer></Footer>
+      </div>
+    </React.Fragment>
   );
 }
 
