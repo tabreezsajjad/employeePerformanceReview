@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { OutTable, ExcelRenderer } from "react-excel-renderer";
 import "./Dashboard.css";
 
 class Dashboard extends Component {
@@ -7,21 +6,6 @@ class Dashboard extends Component {
     super(props);
     this.state = {};
   }
-
-  fileHandler = (event) => {
-    let fileObj = event.target.files[0];
-    //just pass the fileObj as parameter
-    ExcelRenderer(fileObj, (err, resp) => {
-      if (err) {
-        console.log(err);
-      } else {
-        this.setState({
-          cols: resp.cols,
-          rows: resp.rows,
-        });
-      }
-    });
-  };
   render() {
     return (
       <React.Fragment>
@@ -33,21 +17,9 @@ class Dashboard extends Component {
 
           <div>
             <h4>Upload your data</h4>
-            <input
-              type="file"
-              onChange={this.fileHandler.bind(this)}
-              style={{ padding: "10px" }}
-            />
           </div>
 
-          <div>
-            <OutTable
-              data={this.state.rows}
-              columns={this.state.cols}
-              tableClassName="ExcelTable2007"
-              tableHeaderRowClass="heading"
-            />
-          </div>
+          <div></div>
         </div>
       </React.Fragment>
     );
